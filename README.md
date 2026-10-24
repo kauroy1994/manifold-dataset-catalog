@@ -2,14 +2,12 @@
 
 **Existing manufacturing datasets. A transparent research roadmap.**
 
-Process-grounded enhancement for reusable manufacturing science. [<img src="https://iconmonstr.com" width="32" height="32" alt="GitHub">](https://github.com/kauroy1994/manifold-dataset-catalog)
-
-
+Process-grounded enhancement for reusable manufacturing science. 
 
 > **PRE-AWARD PLANNING · SOURCE CATALOG**  
 > This repository catalogs previously published Future Factories data and presents MANIFOLD's proposed enhancement research. It is **not** a release of enhanced datasets, a validated event-extraction system, or an NSF-funded project announcement. The graph example is illustrative; no recorded manufacturing cycle has been reconstructed or scientifically validated here.
 
-[Explore the dataset catalog](#dataset-catalog) · [Open the illustrative graph](examples/interactive_peg_viewer.html) · [Read the research roadmap](docs/roadmap.md)
+[<img src="https://iconmonstr.com" width="32" height="32" alt="GitHub">](https://github.com/kauroy1994/manifold-dataset-catalog) · [Explore the dataset catalog](#dataset-catalog) · [Open the illustrative graph](examples/interactive_peg_viewer.html) · [Read the research roadmap](docs/roadmap.md)
 
 **Four source assets · Two collection campaigns · One testbed**
 
