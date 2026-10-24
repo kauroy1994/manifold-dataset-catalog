@@ -2,7 +2,7 @@
 
 **Existing manufacturing datasets. A transparent research roadmap.**
 
-Process-grounded enhancement for reusable manufacturing science.
+Process-grounded enhancement for reusable manufacturing science. [![GitHub](https://shields.io)]([https://github.com](https://github.com/kauroy1994/manifold-dataset-catalog))
 
 > **PRE-AWARD PLANNING · SOURCE CATALOG**  
 > This repository catalogs previously published Future Factories data and presents MANIFOLD's proposed enhancement research. It is **not** a release of enhanced datasets, a validated event-extraction system, or an NSF-funded project announcement. The graph example is illustrative; no recorded manufacturing cycle has been reconstructed or scientifically validated here.
