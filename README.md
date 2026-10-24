@@ -1,5 +1,7 @@
 # MANIFOLD
 
+[![GitHub repository](https://img.shields.io/badge/GitHub-View%20repository-181717?logo=github&logoColor=white)](https://github.com/kauroy1994/manifold-dataset-catalog)
+
 **Existing manufacturing datasets. A transparent research roadmap.**
 
 Process-grounded enhancement for reusable manufacturing science. 
