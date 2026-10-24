@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MANIFOLD pre-award catalog of published Future Factories manufacturing datasets and proposed evidence-preserving enhancement research. No enhanced dataset release or NSF funding is claimed.">
+<meta name="theme-color" content="#193e33">
+<title>Publish MANIFOLD from your personal GitHub account · MANIFOLD</title>
+<link rel="stylesheet" href="./assets/site.css">
+</head>
+<body class="document">
+<a class="skip" href="#main-content">Skip to content</a>
+<header class="site-header status-strip"><div class="header-inner">
+ <a class="brand" href="./index.html"><span aria-hidden="true">/</span>MANIFOLD</a>
+ <nav class="site-nav" aria-label="Main navigation"><a href="./index.html#dataset-catalog">Dataset catalog</a><a href="./docs/roadmap.html">Roadmap</a><a href="./examples/interactive_peg_viewer.html">Design preview</a><a href="./index.html#proposed-team">Team</a></nav>
+</div></header>
+<div class="layout"><aside class="rail" aria-label="On this page"><div class="rail-inner"><span class="rail-kicker">Research planning / 01</span><a href="#1-review-the-public-content">1. Review the public content</a><a href="#2-create-an-ordinary-project-repository">2. Create an ordinary project repository</a><a href="#3-enable-the-website">3. Enable the website</a><a href="#4-edit-once-update-both">4. Edit once, update both</a><a href="#5-preview-locally">5. Preview locally</a><a href="#6-optional-adjustments-before-publication">6. Optional adjustments before publication</a><a href="#troubleshooting">Troubleshooting</a><a href="#official-deployment-references">Official deployment references</a><p class="rail-note"><strong>Pre-award catalog</strong><br>Source data are upstream.<br>Enhancements are proposed.<br>No funding is implied.</p></div></aside>
+<main id="main-content" class="doc"><div class="breadcrumb"><a href="./index.html">MANIFOLD</a> / DOCUMENTATION</div><h1 id="publish-manifold-from-your-personal-github-account">Publish MANIFOLD from your personal GitHub account</h1>
+<p>This package is a <strong>pre-award source catalog</strong>, not a completed research platform. No content has been published on your behalf.</p>
+<h2 id="1-review-the-public-content">1. Review the public content</h2>
+<p>Read <code>README.md</code>, the team table, <code>docs/licensing.md</code>, and <code>DATA_GOVERNANCE.md</code>. Confirm that you have permission to publish the project description and proposed collaborator roles. Do not add the full proposal, budgets, private collaborator documents, raw data, worker images, or credentials.</p>
+<p>The public site clearly distinguishes existing upstream data, conceptual examples, and planned research. Keep those labels intact. No external archival host, award, or pilot commitment is claimed.</p>
+<h2 id="2-create-an-ordinary-project-repository">2. Create an ordinary project repository</h2>
+<p>On your personal GitHub account, create a <strong>public</strong> repository. Suggested name: <code>manifold-dataset-catalog</code>.</p>
+<p>This is a project website: do not rename or replace your personal profile repository or your existing personal website. Create the new repository empty, without generating another README or license.</p>
+<p>Extract the ZIP and upload the <strong>contents</strong> of <code>MANIFOLD_PreAward_Repository</code>, not the ZIP itself and not an extra enclosing folder. In particular, preserve the hidden <code>.github</code> directory and <code>.gitignore</code>.</p>
+<p>The repository root should contain <code>README.md</code>, <code>GETTING_STARTED.md</code>, <code>catalog/</code>, <code>docs/</code>, <code>examples/</code>, <code>assets/</code>, <code>site/</code>, <code>tools/</code>, <code>tests/</code>, and <code>.github/</code>.</p>
+<h3 id="option-a-github-desktop">Option A: GitHub Desktop</h3>
+<p>Add the extracted folder as a local repository, create a repository there when prompted, and publish it to your account. Ensure that the repository visibility is public. Review the changed-file list, including <code>.github/workflows/</code>, before committing.</p>
+<h3 id="option-b-git-command-line">Option B: Git command line</h3>
+<p>Run these commands from the extracted repository folder. Replace only the remote URL with the exact HTTPS URL displayed by GitHub for the empty repository you created.</p>
+<pre><code class="language-bash">git init -b main
+git add .
+git commit -m &quot;Add MANIFOLD pre-award dataset catalog&quot;
+git remote add origin https://github.com/YOUR_USERNAME/manifold-dataset-catalog.git
+git push -u origin main
+</code></pre>
+<p><code>YOUR_USERNAME</code> above is an instruction variable, not a published site dependency. The site itself has no hard-coded GitHub owner or domain.</p>
+<h3 id="option-c-browser-upload">Option C: Browser upload</h3>
+<p>Use <strong>Add file → Upload files</strong> and upload the extracted contents. Confirm that <code>.github/workflows/check.yml</code> and <code>.github/workflows/pages.yml</code> exist afterward. File pickers may hide dot-prefixed folders; GitHub Desktop or Git is more reliable. Uploading the ZIP as a single file will not publish its contents.</p>
+<h2 id="3-enable-the-website">3. Enable the website</h2>
+<p>In the new repository, select <strong>Settings → Pages → Build and deployment → Source → GitHub Actions</strong>.</p>
+<p>Open <strong>Actions → Publish documentation website → Run workflow</strong>, choose <code>main</code>, and run it. The initial push may have tried to publish before Pages was enabled; rerun after enabling Pages. After deployment succeeds, GitHub's Pages settings and the workflow environment display the real site address.</p>
+<p>For a normal project repository, the address has the form:</p>
+<pre><code class="language-text">https://YOUR_USERNAME.github.io/manifold-dataset-catalog/
+</code></pre>
+<p>Do not configure “Deploy from a branch” for the source repository unless you separately publish a built static directory. This package's normal route is the supplied GitHub Actions workflow.</p>
+<p>The workflow does not require your Kaggle credentials, a custom domain, an API key, or an AI subscription. It downloads only the Python documentation-rendering dependencies.</p>
+<h2 id="4-edit-once-update-both">4. Edit once, update both</h2>
+<p>Edit <strong>README.md</strong> to change the GitHub front page and website homepage. On a push to <code>main</code>, the workflow rebuilds the website. Edit the Markdown dataset cards and documents to change their corresponding website pages. The builder rewrites <code>.md</code> links to <code>.html</code> and keeps paths relative.</p>
+<p><code>catalog/datasets.json</code> and the human-readable cards must be updated together when source metadata changes. Record the evidence and review date in the ledger. A metadata correction is not a raw-file audit.</p>
+<h2 id="5-preview-locally">5. Preview locally</h2>
+<p>Use Python 3.10 or newer; the included workflow uses Python 3.12.</p>
+<pre><code class="language-bash">python -m pip install -r requirements-site.txt
+python tools/check_repository.py
+python -m unittest discover -s tests -v
+python tools/build_site.py
+python -m http.server 8000 --directory _site
+</code></pre>
+<p>Open <code>http://localhost:8000</code> in your browser. On Windows, replace <code>python</code> with <code>py</code> if that is how Python is installed. The package includes a prebuilt <code>_site/</code> for immediate local review, but <code>_site/</code> is ignored by Git because the workflow rebuilds it.</p>
+<p>The test suite checks catalog bookkeeping, example consistency, page links and documentation rendering. It does not test manufacturing claims or authenticate upstream downloads.</p>
+<h2 id="6-optional-adjustments-before-publication">6. Optional adjustments before publication</h2>
+<p>Enable Issues and private vulnerability reporting where available. The supplied issue forms collect catalog corrections and reuse interest, not raw datasets or sensitive evidence. Add the real website address to the repository's About panel after successful deployment. <code>CITATION.cff</code> intentionally omits an invented repository URL or DOI; add the actual repository URL after publication if desired.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>404 page:</strong> confirm the source is GitHub Actions, the deployment completed, and the URL includes the project-repository name. Do not assume the site lives at your account's domain root.</p>
+<p><strong>Workflow fails before deployment:</strong> check that Pages is enabled, GitHub Actions is permitted, the branch is <code>main</code>, and the complete hidden <code>.github</code> folder was uploaded.</p>
+<p><strong>Viewer looks unstyled locally:</strong> open it from <code>_site/examples/interactive_peg_viewer.html</code> with the full package intact, or use the local HTTP server. Keep the <code>assets/</code> directory alongside the site.</p>
+<p><strong>README changed but website did not:</strong> inspect the latest publication workflow run. The source README is not a second, separately maintained homepage.</p>
+<p><strong>Catalog check reports an out-of-sync viewer:</strong> after intentionally editing the example JSON-LD, regenerate the checked-in viewer with <code>python tools/sync_example.py</code>, then rerun the tests. This is a documentation operation, not evidence validation.</p>
+<h2 id="official-deployment-references">Official deployment references</h2>
+<p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">GitHub Pages publishing sources</a> · <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages">Custom Pages workflows</a>.</p>
+</main></div>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-mark">MANIFOLD / 0.1.0-PLANNING</div><p>Existing data: Future Factories, University of South Carolina. Proposed enhancement consortium led by The University of Alabama. Illustrations are not verified source records. No NSF award or endorsement is claimed.</p><a class="back-top" href="#main-content">Back to top ↑</a></div></footer>
+</body></html>

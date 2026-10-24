@@ -1,0 +1,378 @@
+{
+  "catalog_version": "0.1.0-planning",
+  "status": "pre_award_source_catalog",
+  "checked_on": "2026-10-24",
+  "scope": "Four catalog assets from two recording campaigns on one testbed. Source data stay upstream.",
+  "verification_scope": "Publication metadata and published URLs checked; landing pages returned their expected titles. Kaggle page bodies were not extractable in this check. No authenticated downloads, file hashes, complete file inventories, or per-file licenses were verified.",
+  "publications": [
+    {
+      "id": "harik2024future",
+      "title": "Analog and Multi-modal Manufacturing Datasets Acquired on the Future Factories Platform",
+      "year": 2024,
+      "arxiv": "2401.15544",
+      "url": "https://arxiv.org/abs/2401.15544",
+      "pdf": "https://arxiv.org/pdf/2401.15544",
+      "authors": [
+        "Ramy Harik",
+        "Fadi El Kalach",
+        "Jad Samaha",
+        "Devon Clark",
+        "Drew Sander",
+        "Philip Samaha",
+        "Liam Burns",
+        "Ibrahim Yousif",
+        "Victor Gadow",
+        "Theodros Tarekegne",
+        "Nitol Saha"
+      ]
+    },
+    {
+      "id": "harik2025future",
+      "title": "Analog and Multi-modal Manufacturing Datasets Acquired on the Future Factories Platform V2",
+      "year": 2025,
+      "arxiv": "2502.05020",
+      "url": "https://arxiv.org/abs/2502.05020",
+      "pdf": "https://arxiv.org/pdf/2502.05020",
+      "authors": [
+        "Ramy Harik",
+        "Fadi El Kalach",
+        "Jad Samaha",
+        "Philip Samaha",
+        "Devon Clark",
+        "Drew Sander",
+        "Liam Burns",
+        "Ibrahim Yousif",
+        "Victor Gadow",
+        "Ahmed Mahmoud",
+        "Thorsten Wuest"
+      ]
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "FF23",
+      "name": "December 2023 / Future Factories V1",
+      "collection_dates": [
+        "2023-12-11",
+        "2023-12-12"
+      ],
+      "reported_duration_hours": 30,
+      "reported_complete_cycles": 325,
+      "publication": "harik2024future",
+      "source_locator": "PDF pp. 1 and 5, Abstract and Section III",
+      "location": "Future Factories Laboratory, University of South Carolina",
+      "note": "Analog and multimodal assets were acquired during the same campaign. The 325 complete cycles are reported after filtering; raw files have not been reconciled here."
+    },
+    {
+      "id": "FF24",
+      "name": "August 2024 / Future Factories V2",
+      "collection_dates": [
+        "2024-08-13"
+      ],
+      "reported_duration_hours": 8,
+      "reported_complete_cycles": 93,
+      "publication": "harik2025future",
+      "source_locator": "PDF pp. 1 and 3, Abstract and Section III",
+      "location": "Future Factories Laboratory, University of South Carolina",
+      "note": "One testbed, second recording campaign. The 93 complete cycles are reported by the publication, not independently recounted here."
+    }
+  ],
+  "assets": [
+    {
+      "id": "FF23-A",
+      "campaign_id": "FF23",
+      "name": "2023 analog observations",
+      "slug": "ff23-analog",
+      "modalities": [
+        "sensor time series",
+        "cycle-level annotations"
+      ],
+      "formats_reported": [
+        "CSV"
+      ],
+      "reported_multimodal_records": null,
+      "reported_sampling_hz": {
+        "minimum": 10,
+        "maximum": 10,
+        "source_locator": "PDF p. 5, Section III(a)"
+      },
+      "reported_camera_views": null,
+      "reported_features": [
+        "Cycle-level missing-component annotations",
+        "Sensor streams from the manufacturing assembly/disassembly experiment"
+      ],
+      "native_label_names_reported": [
+        "NoNoseCone",
+        "NoBody2,NoNose",
+        "NoBody1,NoBody2,NoNose"
+      ],
+      "publication": "harik2024future",
+      "facts_locator": "PDF p. 5, Section III(a)",
+      "links_locator": "PDF p. 6, Download Links",
+      "license_locator": "PDF p. 6, License",
+      "upstream_parts": [
+        {
+          "part": 1,
+          "parts_total": 1,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2023-12-12-analog-dataset",
+          "kaggle_identifier": "ramyharik/ff-2023-12-12-analog-dataset",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        }
+      ],
+      "proposed_enhancement": "Source-linked process-stage annotations and anomaly-to-evidence associations.",
+      "caveats": [
+        "325 is a campaign-level count, not an independent additional set of 325 multimodal executions.",
+        "Published anomaly labels are not validated operation-level event annotations."
+      ],
+      "catalog_status": "publication_reported",
+      "raw_data_included": false,
+      "file_inventory_audited": false,
+      "source_version_pinned": false,
+      "reported_license": "CC-BY-SA-4.0",
+      "license_status": "reported_in_publication_not_file_level_verified",
+      "upstream_acquisition_institution": "University of South Carolina",
+      "planned_enhancement_status": "proposed_not_implemented",
+      "catalog_review_date": "2026-10-24"
+    },
+    {
+      "id": "FF23-M",
+      "campaign_id": "FF23",
+      "name": "2023 multimodal observations",
+      "slug": "ff23-multimodal",
+      "modalities": [
+        "sensor time series",
+        "dual-view images"
+      ],
+      "formats_reported": [
+        "JSON",
+        "image batches"
+      ],
+      "reported_multimodal_records": 166000,
+      "reported_sampling_hz": {
+        "minimum": 2,
+        "maximum": 3,
+        "source_locator": "PDF p. 5, Section III(b)"
+      },
+      "reported_camera_views": 2,
+      "reported_features": [
+        "Sensor values linked to dual-view imagery",
+        "Batched images and corresponding JSON records"
+      ],
+      "native_label_names_reported": null,
+      "publication": "harik2024future",
+      "facts_locator": "PDF pp. 5–6, Section III(b)",
+      "links_locator": "PDF p. 6, Download Links",
+      "license_locator": "PDF p. 6, License",
+      "upstream_parts": [
+        {
+          "part": 1,
+          "parts_total": 6,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2023-12-12-multi-modal-dataset-16",
+          "kaggle_identifier": "ramyharik/ff-2023-12-12-multi-modal-dataset-16",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        },
+        {
+          "part": 2,
+          "parts_total": 6,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2023-12-12-multi-modal-dataset-26",
+          "kaggle_identifier": "ramyharik/ff-2023-12-12-multi-modal-dataset-26",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        },
+        {
+          "part": 3,
+          "parts_total": 6,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2023-12-12-multi-modal-dataset-36",
+          "kaggle_identifier": "ramyharik/ff-2023-12-12-multi-modal-dataset-36",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        },
+        {
+          "part": 4,
+          "parts_total": 6,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2023-12-12-multi-modal-dataset-46",
+          "kaggle_identifier": "ramyharik/ff-2023-12-12-multi-modal-dataset-46",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        },
+        {
+          "part": 5,
+          "parts_total": 6,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2023-12-12-multi-modal-dataset-56",
+          "kaggle_identifier": "ramyharik/ff-2023-12-12-multi-modal-dataset-56",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        },
+        {
+          "part": 6,
+          "parts_total": 6,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2023-12-12-multi-modal-dataset-66",
+          "kaggle_identifier": "ramyharik/ff-2023-12-12-multi-modal-dataset-66",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        }
+      ],
+      "proposed_enhancement": "Evidence-preserving visual–sensor alignment and event grounding.",
+      "caveats": [
+        "The approximately 166,000 records cover the complete multimodal asset, not each of its six parts.",
+        "Do not assume every analog annotation can be transferred to an image without checking identifiers and time alignment."
+      ],
+      "catalog_status": "publication_reported",
+      "raw_data_included": false,
+      "file_inventory_audited": false,
+      "source_version_pinned": false,
+      "reported_license": "CC-BY-SA-4.0",
+      "license_status": "reported_in_publication_not_file_level_verified",
+      "upstream_acquisition_institution": "University of South Carolina",
+      "planned_enhancement_status": "proposed_not_implemented",
+      "catalog_review_date": "2026-10-24"
+    },
+    {
+      "id": "FF24-A",
+      "campaign_id": "FF24",
+      "name": "2024 analog observations",
+      "slug": "ff24-analog",
+      "modalities": [
+        "sensor time series",
+        "cycle-state information"
+      ],
+      "formats_reported": [
+        "CSV"
+      ],
+      "reported_multimodal_records": null,
+      "reported_sampling_hz": null,
+      "reported_camera_views": null,
+      "reported_features": [
+        "Explicit cycle-state feature",
+        "21 cycle-state descriptions in Appendix A",
+        "Documented R02 potentiometer malfunction"
+      ],
+      "native_label_names_reported": null,
+      "publication": "harik2025future",
+      "facts_locator": "PDF pp. 3–5, Sections III–V and Appendix A",
+      "links_locator": "PDF p. 5, Download Links",
+      "license_locator": "PDF p. 5, License",
+      "upstream_parts": [
+        {
+          "part": 1,
+          "parts_total": 1,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2024-08-13-analog-dataset",
+          "kaggle_identifier": "ramyharik/ff-2024-08-13-analog-dataset",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        }
+      ],
+      "proposed_enhancement": "Process-state vocabulary mappings and evidence-aware sensor-reliability annotations.",
+      "caveats": [
+        "Sampling rate is not copied from FF23; it remains unverified for the FF24 files.",
+        "The paper reports a sensor failure at 18:19:25.029. This is source documentation, not a MANIFOLD-verified event or performance result."
+      ],
+      "catalog_status": "publication_reported",
+      "raw_data_included": false,
+      "file_inventory_audited": false,
+      "source_version_pinned": false,
+      "reported_license": "CC-BY-SA-4.0",
+      "license_status": "reported_in_publication_not_file_level_verified",
+      "upstream_acquisition_institution": "University of South Carolina",
+      "planned_enhancement_status": "proposed_not_implemented",
+      "catalog_review_date": "2026-10-24"
+    },
+    {
+      "id": "FF24-M",
+      "campaign_id": "FF24",
+      "name": "2024 multimodal observations",
+      "slug": "ff24-multimodal",
+      "modalities": [
+        "sensor time series",
+        "dual-view images",
+        "worker-safety observations"
+      ],
+      "formats_reported": [
+        "JSON",
+        "image batches"
+      ],
+      "reported_multimodal_records": 85000,
+      "reported_sampling_hz": null,
+      "reported_camera_views": 2,
+      "reported_features": [
+        "Dual-view image and sensor records",
+        "Worker-safety observations reported in the collection"
+      ],
+      "native_label_names_reported": [
+        "No Nose",
+        "No Nose and No Body 2",
+        "No Nose, No Body 2, and No Body 1",
+        "Normal"
+      ],
+      "publication": "harik2025future",
+      "facts_locator": "PDF pp. 3–4, Sections III and V(b–c)",
+      "links_locator": "PDF p. 5, Download Links",
+      "license_locator": "PDF p. 5, License",
+      "upstream_parts": [
+        {
+          "part": 1,
+          "parts_total": 3,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2024-08-13-multi-modal-dataset-13",
+          "kaggle_identifier": "ramyharik/ff-2024-08-13-multi-modal-dataset-13",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        },
+        {
+          "part": 2,
+          "parts_total": 3,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2024-08-13-multi-modal-dataset-23",
+          "kaggle_identifier": "ramyharik/ff-2024-08-13-multi-modal-dataset-23",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        },
+        {
+          "part": 3,
+          "parts_total": 3,
+          "url": "https://www.kaggle.com/datasets/ramyharik/ff-2024-08-13-multi-modal-dataset-33",
+          "kaggle_identifier": "ramyharik/ff-2024-08-13-multi-modal-dataset-33",
+          "url_status": "listed_in_publication_and_landing_page_observed",
+          "checked_on": "2026-10-24",
+          "download_verified": false,
+          "raw_file_license_verified": false
+        }
+      ],
+      "proposed_enhancement": "Source-linked multimodal events and privacy-aware safety-observation metadata.",
+      "caveats": [
+        "Approximately 85,000 records span the three parts together, not each part.",
+        "Worker imagery requires privacy and redistribution review; publication availability is not a blanket clearance for every use.",
+        "Label names here are transcribed from the paper, not reconciled with the distributed files."
+      ],
+      "catalog_status": "publication_reported",
+      "raw_data_included": false,
+      "file_inventory_audited": false,
+      "source_version_pinned": false,
+      "reported_license": "CC-BY-SA-4.0",
+      "license_status": "reported_in_publication_not_file_level_verified",
+      "upstream_acquisition_institution": "University of South Carolina",
+      "planned_enhancement_status": "proposed_not_implemented",
+      "catalog_review_date": "2026-10-24"
+    }
+  ]
+}
