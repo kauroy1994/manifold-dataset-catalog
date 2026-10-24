@@ -2,7 +2,8 @@
 
 **Existing manufacturing datasets. A transparent research roadmap.**
 
-Process-grounded enhancement for reusable manufacturing science. [<img src="https://iconmonstr.com" width="32" height="32" alt="GitHub">]([https://github.com](https://github.com](https://github.com/kauroy1994/manifold-dataset-catalog))
+Process-grounded enhancement for reusable manufacturing science. [<img src="https://iconmonstr.com" width="32" height="32" alt="GitHub">](https://github.com/kauroy1994/manifold-dataset-catalog)
+
 
 
 > **PRE-AWARD PLANNING · SOURCE CATALOG**  
