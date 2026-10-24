@@ -1,3 +1,0 @@
-# Documentation build only; no ML or manufacturing-data dependencies.
-markdown-it-py==4.2.0
-mdurl==0.1.2
