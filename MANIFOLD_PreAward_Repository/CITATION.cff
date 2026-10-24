@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+type: software
+title: "MANIFOLD: Existing Manufacturing Dataset Catalog and Research Roadmap"
+message: "This citation describes the pre-award planning catalog, not the source datasets. Cite Harik et al. (2024, 2025) for the original Future Factories data; complete records are in references.bib."
+authors:
+  - family-names: Roy
+    given-names: Kaushik
+    affiliation: The University of Alabama
+version: 0.1.0-planning
+license: MIT
+abstract: "A pre-award catalog of published Future Factories assets, conceptual Process Event Graph examples, and a proposed research roadmap. No raw or scientifically validated enhanced manufacturing datasets are distributed."
+keywords:
+  - manufacturing data
+  - source catalog
+  - process event graphs
+  - research planning
